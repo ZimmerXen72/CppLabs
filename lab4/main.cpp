@@ -8,6 +8,12 @@ int main() {
     do {
         cout << "Choose a shape to add:\n1. Circle\n2. Parallelogram\n3. Print all shapes\n4. Compute total area\n5. Compute total perimeter\n6. Move all shapes\n7. Scale all shapes\n8. Compute center of mass\n0. Quit\n";
         cin >> choice;
+        // App::start() {
+        // try {
+        // flow = this->flowFactory->createByUserInput(choice);
+        // flow->start();
+        // } catch() {...}
+        // }
         switch (choice) {
             case 1: {
                 double x, y, r, m;
@@ -38,6 +44,7 @@ int main() {
                 break;
             }
             case 6: {
+                //return new MoveFlow();
                 double dx, dy;
                 cout << "Enter dx, dy:\n";
                 cin >> dx >> dy;
@@ -47,6 +54,7 @@ int main() {
                 break;
             }
             case 7: {
+                //return new ScaleFactorFLow()
                 double factor;
                 cout << "Enter scale factor:\n";
                 cin >> factor;
@@ -56,6 +64,7 @@ int main() {
                 break;
             }
             case 8: {
+                //return new CenterMassflow()
                 auto com = getCenterOfMass(figures);
                 cout << "Center of mass: (" << com.first << ", " << com.second << ")\n";
                 break;
