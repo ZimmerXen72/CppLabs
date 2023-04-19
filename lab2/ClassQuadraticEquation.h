@@ -1,6 +1,5 @@
 #ifndef CLASSQUADRATICEQUATION_H
 #define CLASSQUADRATICEQUATION_H
-#include "ClassDisplayInterface.h"
 #include "ClassConsoleDisplay.h"
 
 class QuadraticEquation {
