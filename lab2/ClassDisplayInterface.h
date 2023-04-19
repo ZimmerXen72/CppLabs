@@ -1,6 +1,7 @@
-#ifndef DISPLAYINTERFACE_H
-#define DISPLAYINTERFACE_H
+#ifndef CLASSDISPLAYINTERFACE_H
+#define CLASSDISPLAYINTERFACE_H
 using namespace std;
+
 class DisplayInterface {
 public:
     virtual void displayCoefficients(double a, double b, double c) = 0;

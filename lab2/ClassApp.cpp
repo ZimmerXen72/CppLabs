@@ -1,5 +1,5 @@
-#include "App.h"
-#include "Func.h"
+#include "ClassApp.h"
+#include "ClassQuadraticEquation.h"
 using namespace std;
 App::App() {
     appName = "MyApp";

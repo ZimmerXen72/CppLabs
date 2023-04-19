@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.23)
-project(untitled5)
+project(lab2)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(untitled5 main.cpp DisplayInterface.h DisplayInterface.h ConsoleDisplay.h Func.h App.h App.cpp)
+add_executable(lab2 main.cpp ClassDisplayInterface.h ClassConsoleDisplay.h ClassQuadraticEquation.h ClassApp.h ClassApp.cpp ClassConsoleDisplay.cpp ClassQuadraticEquation.cpp)
