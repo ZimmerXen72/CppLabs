@@ -1,5 +1,4 @@
-#include "header.h"
-#include <iostream>
+#include "ClassMatrix.h"
 using namespace std;
 Matrix::Matrix() {
     data = new int*[3];
@@ -8,7 +7,7 @@ Matrix::Matrix() {
     }
     for (int i = 0; i < 3; ++i) {
         for (int j = 0; j < 3; ++j) {
-            data[i][j] = rand() % 30;
+            data[i][j] = i;
         }
     }
 }
@@ -50,7 +49,6 @@ Matrix& Matrix::operator=(const Matrix& other) {
     return *this;
 }
 
-// matrix addition
 Matrix Matrix::operator+(const Matrix& other) const {
     Matrix result;
     for (int i = 0; i < 3; ++i) {
@@ -102,6 +100,13 @@ bool Matrix::operator==(const Matrix& other) const {
         }
     }
     return true;
+}
+void Matrix::setValues() {
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            cin >> data[i][j];
+        }
+    }
 }
 void Matrix::print() const {
     for (int i = 0; i < 3; ++i) {

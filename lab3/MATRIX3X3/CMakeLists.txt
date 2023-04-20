@@ -3,4 +3,4 @@ project (MATRIX3X3)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(MATRIX3X3 main.cpp header.h func.cpp)
+add_executable(MATRIX3X3 main.cpp ClassMatrix.h ClassMatrix.cpp ClassApp.h ClassApp.cpp)

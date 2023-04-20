@@ -3,4 +3,4 @@ project(ARRAY)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(ARRAY main.cpp header.h func.cpp)
+add_executable(ARRAY main.cpp ClassArray.h ClassArray.cpp ClassApp.h ClassApp.cpp)

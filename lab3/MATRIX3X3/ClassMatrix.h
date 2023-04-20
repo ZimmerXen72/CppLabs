@@ -1,6 +1,7 @@
-#ifndef MATRIX_H
-#define MATRIX_H
-
+#ifndef CLASSMATRIX_H
+#define CLASSMATRIX_H
+#include <iostream>
+using namespace std;
 class Matrix {
 public:
     Matrix();
@@ -12,9 +13,10 @@ public:
     Matrix operator*(const Matrix& other) const;
     Matrix operator*(const int i) const;
     bool operator==(const Matrix& other) const;
+    void setValues();
     void print() const;
 private:
     int** data;
 };
 
-#endif  // MATRIX_H
+#endif
