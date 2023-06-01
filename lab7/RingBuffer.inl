@@ -1,5 +1,5 @@
-#include <cstddef>
-#include <stdexcept>
+#pragma once
+#include "RingBuffer.h"
 
 template <typename T>
 RingBuffer<T>::RingBuffer(size_t max_capacity)
@@ -47,35 +47,19 @@ T& RingBuffer<T>::operator[](size_t index) {
 }
 
 template <typename T>
-const T& RingBuffer<T>::front() const {
+Iterator<T> RingBuffer<T>::front() {
     if (size_ == 0) {
         throw std::out_of_range("Buffer is empty");
     }
-    return buffer_[head_];
+    return Iterator<T>(&buffer_[head_], max_capacity_, 0);
 }
 
 template <typename T>
-T& RingBuffer<T>::front() {
+Iterator<T> RingBuffer<T>::back() {
     if (size_ == 0) {
         throw std::out_of_range("Buffer is empty");
     }
-    return buffer_[head_];
-}
-
-template <typename T>
-const T& RingBuffer<T>::back() const {
-    if (size_ == 0) {
-        throw std::out_of_range("Buffer is empty");
-    }
-    return buffer_[(head_ + size_ - 1) % max_capacity_];
-}
-
-template <typename T>
-T& RingBuffer<T>::back() {
-    if (size_ == 0) {
-        throw std::out_of_range("Buffer is empty");
-    }
-    return buffer_[(head_ + size_ - 1) % max_capacity_];
+    return Iterator<T>(&buffer_[(head_ + size_ - 1) % max_capacity_], max_capacity_, size_ - 1);
 }
 
 template <typename T>
